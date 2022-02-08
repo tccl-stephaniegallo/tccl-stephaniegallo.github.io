@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<!-- saved from url=(0269)https://lgapi-us.libapps.com/widget_box.php?site_id=876&widget_type=8&output_format=2&widget_title=Off-Campus+Access&widget_height=&widget_width=&widget_embed_type=1&guide_id=693287&box_id=24871682&map_id=29205276&content_only=0&include_jquery=0&config_id=1599151441280 -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    <!-- BEGIN: writeHead() -->
+    
+		<title>API Box Page</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<link rel="stylesheet" href="./jquery-ui.min(1).css">
+		<link rel="stylesheet" href="./bootstrap.min.css">
+		<link rel="stylesheet" href="./springshare.public.min(1).css">
+		<link rel="stylesheet" href="./springshare.common.min(1).css">
+		<link href="./font-awesome.min(2).css" rel="stylesheet">
+		<script type="text/javascript" src="./1.12.4_jquery.min(1).js"></script><!-- js_include_fallback.twig -->
+    <script src="./jquery-ui.min.js"></script>
+    <script>
+        jQuery.ui ||
+        document.write('<script src="/web/jquery/js/jquery-ui.min.js?2695">\x3C/script>');
+    </script>
+<!-- !js_include_fallback.twig -->
+		<script type="text/javascript" src="./bootstrap.min.js"></script>
+		<script type="text/javascript" src="./springshare.public.min(2).js"></script>
+		<script type="text/javascript" src="./springshare.common.min(2).js"></script>
+		<style>/** bootstrap_tab_css.twig **/
+#s-lg-tabs-container .nav-tabs > li > a,
+#s-lg-tabs-container .nav-tabs > li > button,
+#s-lg-tabs-container .nav-pills > li > a,
+#s-lg-tabs-container .nav-pills > li > button {
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    background-color: #f0f0f0;
+    color: #6d6d6d;
+    font-weight: bold;
+    padding: 4px 15px;
+}
+
+#s-lg-tabs-container .nav-tabs {
+    border-bottom: 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li#s-lg-admin-tab-add > a {
+    -webkit-border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a:hover,
+#s-lg-tabs-container .nav-tabs > li > button:hover,
+#s-lg-tabs-container .nav-pills > li > a:hover,
+#s-lg-tabs-container .nav-pills > li > button:hover {
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > button,
+#s-lg-tabs-container .nav-pills > .active > a,
+#s-lg-tabs-container .nav-pills > .active > button {
+    color: #ffffff;
+    cursor: default;
+    background-color: #000000;
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > a,
+#s-lg-tabs-container .nav-tabs > .active > .s-lg-subtab-ul > .active > button {
+    color: #ffffff;
+    cursor: default;
+    background-color: #000000;
+    border-bottom-color: transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > .active > a:hover,
+#s-lg-tabs-container .nav-pills > .active > a:hover,
+#s-lg-tabs-container .nav-tabs > .active > button:hover,
+#s-lg-tabs-container .nav-pills > .active > button:hover {
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #000000;
+    border: 1px solid transparent; -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+    border-bottom-color: transparent;
+    font-weight: bold;
+}
+
+#s-lg-tabs-container .nav .dropdown-toggle .caret {
+    border-top-color: #e1e1e1;
+}
+
+#s-lg-tabs-container .nav-tabs button.dropdown-toggle .caret {
+    margin-left: 2px;
+    margin-top: -3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop {
+    border-radius: 0;
+    padding: 4px 6px 4px 3px;
+    border-left: 1px solid transparent;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop {
+    border-radius: 0;
+    padding: 4px 6px 0px 3px;
+    border-left: 1px solid transparent;
+    margin-right: 2px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-drop:hover {
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 4px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-drop:hover {
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 6px 0px 3px;
+}
+
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-tabs > li > button.s-lg-tab-top-link:hover {
+    border-radius: 0;
+    font-weight: bold;
+    padding: 4px 5px 4px 10px;
+}
+
+.nav-tabs > li > a.s-lg-tab-top-link,
+.nav-tabs > li > button.s-lg-tab-top-link {
+    margin-right: 0px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop {
+    border-radius: 0;
+    padding: 4px 8px 4px 8px;
+    border-left: 1px solid transparent;
+    position: absolute;
+    right: 0;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-drop:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-drop:hover {
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+    padding: 4px 8px 4px 8px;
+}
+
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > a.s-lg-tab-top-link:hover,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link,
+#s-lg-tabs-container .nav-pills > li > button.s-lg-tab-top-link:hover {
+    width: 100%;
+    float: left;
+    border-radius: 0;
+    font-weight: bold;
+    padding: 4px 15px 4px 15px;
+}
+
+/** !bootstrap_tab_css.twig **/
+ .s-lib-box {border-color: #cccccc;
+                border-width: 1px;
+                box-shadow: 0 8px 6px -6px #AAAAAA;
+                border-radius: 0;
+                background-color: #fff;
+            }
+            .s-lib-box-std .s-lib-box-title {background-color: #f1f1f1; background-image: none;color: #888;
+                border-bottom: 1px solid #cccccc;
+            }
+            .s-lib-box .s-lib-box-title {background-color: #f1f1f1; background-image: none;color: #888;
+                border-bottom: 1px solid #cccccc;
+                border-radius: 0;
+            }
+            .s-lib-box .s-lg-box-footer {
+                border-radius: 0;
+            }</style>
+		<!-- BEGIN: CUSTOM HEAD SYSTEM JS/CSS -->
+		<!-- production files -->
+
+<link rel="stylesheet" href="./third-party.min.css">
+<script src="./springshare.js"></script>
+
+<!-- staging documents
+<link rel="stylesheet" href="https://libraryweb.staging.wpengine.com/wp-content/themes/ccl/assets/css/third-party.min.css">
+<script src="https://libraryweb.staging.wpengine.com/wp-content/themes/ccl/assets/js/springshare.js?ver=1"></script>-->
+
+<!--TCCL Typography<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7861216/7459392/css/fonts.css">-->
+<!-- TCCS Typography - 2020/09/10 -->
+<link rel="stylesheet" type="text/css" href="./fonts.css">
+
+
+<!-- Hotjar Tracking Code for https://libguides.libraries.claremont.edu/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:1948559,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script><script async="" src="./hotjar-1948559.js"></script>
+
+<script type="text/javascript">
+var path = window.location.pathname;
+var query = window.location.search;
+var page = "/prf.php"; 
+var userProfile = "account_id="; 
+
+console.log(query);
+if ( path == page || path.includes(page)) {
+     if(query.includes(userProfile)) {
+          console.log('dont redirect');
+     } else {
+          console.log('redirect');
+          window.location.href = 'https://library.claremont.edu/staff-directory/'; 
+     }
+}
+</script>
+
+<style>
+html {
+    font-size: 16px !important;
+}
+@media (min-width: 1200px) {
+.container {
+    width: 1250px;
+}
+}
+.s-lib-box-content p:first-child  { margin-top: .5rem; }
+ul { margin-top: .75rem; } 
+.s-lib-box-content ul:first-child { margin-top: 0; } 
+
+.ccl-c-libguide__header .ccl-c-libguide__item a {
+   color: #fff;
+}
+.c-alert.alert-warning {
+   font-size: 16px;
+   padding-top: 50px !important;
+    margin-top: 75px !important;
+}
+@media screen and (min-width: 768px) {
+   .c-alert.alert-warning {
+      margin-top: 85px !important;
+   }
+}
+.c-alert a {
+   color: #000;
+}
+
+
+/*Restores padding to the filters panel*/
+#s-lg-az-filters {
+  padding-bottom: 15px;
+}
+
+/*A - Z container */
+#s-lg-az-cols {
+padding-top: 25px;
+padding-left: 15px;
+padding-right: 15px;
+border: 1px solid #f1f1f1;
+border-radius: 5px;
+max-height: 900px;
+overflow: scroll;
+}
+
+
+/*AZ filters change display to flex*/
+#s-lg-az-filter-cols {
+display: flex;
+flex-direction: row;
+}
+/*AZ filters change order as flex items*/
+#col-search {
+order: 1;
+}
+#col-subjects {
+order: 2;
+}
+#col-types {
+order: 3;
+}
+#col-vendors {
+order: 4;
+}
+
+.s-lg-az-result-title a {
+    color: #332a7e !important;
+    font-weight: 500;
+    text-decoration: none;
+}
+.ccl-c-libguide__header a {
+    color: #fff !important;
+}
+.s-lg-az-result-description, .s-lg-az-result-moreinfo, .s-lg-az-result-moreinfo-link {
+    font-size: 14px  !important;
+}
+.s-lg-az-result {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+.ccl-c-libguide__list {
+    font-size: 16px;
+}
+@media screen and (max-width: 1000px) { 
+    #s-lg-az-filter-cols {
+         flex-direction: column !important;
+    }
+    #az-search-col-1 #col-subjects select, #col-types select, #col-vendors select, #col-search select {
+        width: 100%;
+    }
+    #az-search-col-1 #col-subjects, #col-types, #col-vendors, #col-search {
+        padding-bottom: 15px;
+    }
+}
+
+#s-lib-bc a {
+    color: #332a7e !important;
+}
+a {
+    font-weight: 500;
+}
+.s-lg-az-result-badges {
+    font-size: 16px;
+}
+.ccl-c-quick-nav__bar a:hover, .ccl-c-quick-nav__bar a:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+
+footer p, footer #footer-context a {
+    font-size: 16px !important;
+    line-height: 24px !important; 
+}
+footer .ccl-u-font-size-sm {
+    font-size: 12px !important;
+}
+.ccl-c-quick-nav, 
+.ccl-c-quick-nav.ccl-is-fixed {
+    top: 38px;
+}
+#s-lib-public-header-title, #s-lib-public-header-desc, #s-lg-az-cols {
+    font-family: "Gotham Narrow A","Gotham Narrow B",Arial,sans-serif;
+}
+#s-lib-public-header-title {
+    font-size: 36px;
+}
+#s-lib-public-header-desc {
+    font-size: 16px;
+}
+#az-page {
+    font-family: "Gotham Narrow A","Gotham Narrow B",Arial,sans-serif;
+    line-height: normal;
+}
+.s-lib-profile-widget button {
+    background-color: #111 !important;
+    color: #fff !important;
+}
+.ccl-b-icon {
+    font-size: 16px !important;
+    line-height: 24px !important;
+}
+.ccl-c-user-nav__menu .ccl-b-icon  {
+    font-size: 14px !important;
+    line-height: 14px !important;
+}
+.ccl-c-user-nav__menu a:hover {
+    text-decoration: none;
+}
+#az-page #s-lg-box-profile-container {
+font-size: 16px;
+}
+#az-page #s-lg-box-profile-container .s-lib-box-std .s-lib-box-title{
+background-color: rgba(0,0,0,.5) !important;
+background-image: unset;
+font-size: 20px;
+}
+#az-page #s-lg-box-profile-container .s-lib-profile-div.s-lib-profile-social {
+color: #332a7e !important;
+}
+#az-page #s-lg-az-experts-div #s-lg-box-profile h2.s-lib-box-title {
+    color: #fff;
+}
+#LibGuideCitation {
+z-index: 999;
+}
+/*Staff Profile CSS*/
+#ccl-staff-profile h1#s-lib-public-header-title {
+    margin-bottom: 0px;
+    line-height: 3rem;
+}
+#ccl-staff-profile #s-lib-public-header-desc  {
+    display: flex;
+    flex-direction: column-reverse;
+}
+#ccl-staff-profile #s-lib-public-header-desc #s-lib-public-header-title {
+    font-size: 24px;
+    line-height: 2rem;
+}
+#ccl-staff-profile #s-lib-public-header-desc-pronouns {
+    font-size: 18px;
+}
+</style>
+		<!-- END: CUSTOM HEAD SYSTEM JS/CSS -->
+		<!-- BEGIN: CUSTOM HEAD GUIDE JS/CSS -->
+		
+		<!-- END: CUSTOM HEAD GUIDE JS/CSS -->
+		<style>
+			#s-lg-guide-main {
+				padding-top: 10px;
+			}
+		</style>
+		<script type="text/javascript" src="./springshare.common.min(2).js"></script><script>
+var springStats = springStats || {};
+springStats.saConfig = springStats.saConfig || {
+    site_id: 876,
+    tracking_parameters: {"_st_site_id":876},
+    tracking_server_host: "libguides-proc.springyaws.com"
+};
+</script>
+<script async="" src="./sa.min(1).js"></script>
+        <script>
+            springSpace.Common = springSpace.Common || { };
+            springSpace.Common.constant = {
+                    PROCESSING: {
+                        ACTION_DISPLAY_POLL: 159
+                    }
+            };
+        </script>
+        <script>
+            jQuery(function() {
+                // Enable tooltips.
+                springSpace.UI.initPopOvers();
+                
+                // Set all links and search form to open in new windows.
+                jQuery("a, #s-lg-guide-search-form").attr("target", "_blank");
+            });
+        </script>
+		<script>
+			jQuery(function() {
+				// Set all links to open in new window.
+				jQuery("a").attr("target", "_blank");
+			});
+		</script>    <!-- END: writeHead() -->
+</head>
+<body class="s-lg-guide-body" data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="">
+<!-- BEGIN: Guide Content -->
+<div id="s-lg-guide-main" class="container s-lib-main s-lib-side-borders" tabindex="-1">
+    
+					<div id="s-lg-box-24871682-container" class="s-lib-box-container">
+						<div id="s-lg-box-24871682" class="s-lib-box s-lib-box-std">
+							<h2 class="s-lib-box-title">Off-Campus Access
+                                </h2>
+							<div id="s-lg-box-collapse-24871682">
+								<div class="s-lib-box-content">
+									
+			<div id="s-lg-content-57093502" class="  clearfix">
+				<ul>
+	<li>Click on a database title</li>
+	<li>When prompted through CAS, select your college and enter your username and password
+	<ul>
+		<li>If you are not prompted, you may already be signed in through CAS</li>
+		<li>If you are unable to connect, clear your browser history (except passwords), close your browser, and try again</li>
+		<li>No sign-in required for <a href="https://libguides.libraries.claremont.edu/az.php?s=63895" target="_blank">Open Access databases </a><img alt="open access icon" loading="lazy" src="./open_access_small(1).png" style="box-sizing: inherit; height: 20px; max-width: 100%; width: 20px;"></li>
+	</ul>
+	</li>
+</ul>
+
+<p>Can't login? <a href="https://library.claremont.edu/ask-us/#block-3" target="_blank">Contact Us</a>.</p>
+		   </div>
+								</div>
+								
+							</div>
+						</div>
+					</div></div>
+<!-- END: Guide Content -->
+<div id="s-lib-alert" title=""><div id="s-lib-alert-content"></div></div>
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

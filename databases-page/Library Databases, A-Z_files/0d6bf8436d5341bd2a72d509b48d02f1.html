@@ -1,0 +1,1446 @@
+<!DOCTYPE html>
+<!-- saved from url=(0205)https://claremont.libanswers.com/chat/widget/0d6bf8436d5341bd2a72d509b48d02f1?referer=https%3A%2F%2Flibguides.libraries.claremont.edu%2Faz.php&referer_title=Library%20Databases%2C%20A-Z&auth_id=0&auto=true -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="noindex, nofollow, noarchive">
+        <title>Chat</title>
+
+        <link rel="stylesheet" media="screen" href="./font-awesome.min.css">
+        <link rel="stylesheet" media="screen" href="./LibAnswers_widget.min.css">
+
+        <script>
+            var springSpace = springSpace || {};
+            springSpace.la = springSpace.la || {};
+        </script>
+
+        <style id="styletemplate">
+    [tabindex="-1"] {
+        outline: none;
+    }
+    .s-la-widget {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px 0px 5px 5px;
+        background-color: #f9f9f9;
+    }
+    .s-la-widget .container { padding: 0; }
+    .s-la-widget .widget_base {
+        height: 100%;
+        max-width: 50rem;
+    }
+    .s-la-widget .chatpane {
+        height: 100%;
+        padding-right: 5px;
+        overflow-y: auto;
+    }
+    .s-la-widget .color_head {
+        color: #286090;
+    }
+    .s-la-widget .color_btn {
+        color: #FFFFFF;
+    }
+    .s-la-widget .btn-chat {
+        color:#FFFFFF;
+        background-color:#286090;
+        border-color:#286090;
+    }
+    .s-la-widget .btn-chat:hover, .s-la-widget .btn-chat:active, .s-la-widget .btn-chat:focus, .s-la-widget .btn-chat[disabled] {
+        color:#286090;
+        background-color:#FFFFFF;
+        border-color:#286090;
+    }
+    .s-la-widget .btn-fullWidth {
+        width: 100%;
+    }
+    .s-lch-pane {
+        height: 100%;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: stretch;
+        -webkit-justify-content: stretch;
+        justify-content: stretch;
+        -ms-flex-align: stretch;
+        -webkit-align-items: stretch;
+        align-items: stretch;
+    }
+    .s-lch-pane header.s-lch-pane-header {
+        padding: 0em 0em .25em 0em;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: end;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        border-bottom: 1px solid #286090;
+    }
+    .s-lch-pane header h2#s-lch-status {
+        margin-bottom: 0;
+        font-size: 1em;
+        font-weight: normal;
+        line-height: inherit;
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        text-align: left;
+        overflow: hidden;
+    }
+    h2#s-lch-status.disconnected {
+        color: #B00000;
+    }
+    h2#s-lch-status.connected {
+        color: #008000;
+    }
+
+    #s-lch-header-actions {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 1 1 auto;
+        margin-left: 1.5em;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .s-lch-pane header .s-lch-header-end {
+        margin-left: 2em;
+    }
+    #s-lch-header-actions .btn {
+        margin-right: 1em;
+    }
+    #s-lch-header-actions .btn:last-of-type {
+        margin-right: 0;
+    }
+    .s-lch-pane .scroller {
+        -ms-flex: 2 1 auto;
+        -webkit-flex: 2 1 auto;
+        flex: 2 1 auto;
+        overflow-y: scroll;
+    }
+    .s-lch-pane form#s-lch-post-form {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        padding-top: .5em;
+        border-top: 1px solid #286090;
+    }
+    #s-lch-post-input {
+        height: 4em;
+    	width: 100%;
+    	max-width: 100%;
+    	margin: 0 0 .25em 0;
+    	padding: .5em;
+    	box-sizing: border-box;
+    	font: 12px/1.5em Arial, Helvetica, sans-serif;
+    	border-radius: 2px;
+    	display:block;
+    	border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .s-lch-pane .s-lch-form-actions {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .s-lch-form-actions button.btn-xs {
+        margin-left: 1em;
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+    }
+    .s-lch-form-actions #istyping {
+        text-align: left;
+        -ms-flex: 2 1 auto;
+        -webkit-flex: 2 1 auto;
+        flex: 2 1 auto;
+        font-size: 12px;
+        font-style: italic;
+        margin: 0px;
+    }
+
+    #s-lch-msg-log {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .s-lch-msg {
+        display: block;
+        margin: .5em;
+        padding: 0;
+    }
+
+    .s-lch-msg-sys .s-lch-msg-txt {
+        font-size: .9em;
+        border-top: 1px dotted #286090;
+        border-bottom: 1px dotted #286090;
+        padding: .5em;
+        margin-bottom: 1em;
+    }
+
+    .s-lch-msg-wrap {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -ms-flex-line-pack: start;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+    .s-lch-msg-patron .s-lch-msg-wrap {
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        -ms-flex-line-pack: end;
+        -webkit-align-content: flex-end;
+        align-content: flex-end;
+    }
+    time.s-lch-msg-time {
+        text-align: center;
+        margin: 0 auto .5em auto;
+        display: block;
+        font-size: .8em;
+    }
+    .s-lch-msg-meta {
+        -ms-flex: 0 0 55px;
+        -webkit-flex: 00 55px;
+        flex: 0 0 55px;
+    }
+    .s-lch-msg-patron .s-lch-msg-body {
+        margin-left: 50px;
+        color: #FFFFFF;
+        background-color: #286090;
+        padding: .25em .5em;
+        border-radius: 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    .s-lch-msg-patron time.s-lch-msg-time {
+        text-align: right;
+    }
+    .s-lch-msg-patron .s-lch-msg-txt a {
+        color: #FFFFFF;
+        text-decoration: underline;
+    }
+    .s-lch-msg-patron .s-lch-msg-txt a:hover, .s-lch-msg-patron .s-lch-msg-txt a:active {
+        color: #286090;
+        background-color: #FFFFFF;
+    }
+
+    .s-lch-msg-op .s-lch-msg-body {
+        -ms-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+    .s-lch-msg-op .s-lch-msg-name {
+        font-size: .9em;
+        font-weight: bold;
+        margin-bottom: .5em;
+    }
+    .s-lch-msg-op time.s-lch-msg-time {
+        text-align: left;
+        display: inline-block;
+        font-weight: normal;
+        margin: 0 0 0 1em;
+        font-size: .9em;
+    }
+    .s-lch-msg-op .s-lch-msg-txt {
+        padding: 0em .5em .25em .5em;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    /* profile image wrap */
+    .s-lch-profile {
+        display: block;
+        color: #286090;
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        box-sizing: content-box;
+        border: 2px solid currentColor;
+        background-color: currentColor;
+    }
+    .s-lch-profile img {
+        border-radius: 5px;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    #s-lch-rate-form fieldset {
+        margin-bottom: .5em;
+    }
+    #s-lch-rate-form legend {
+        border: 0;
+        margin-bottom: 5px;
+        font-size: inherit;
+    }
+    #s-lch-rate-form .s-lch-rate-opts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #s-lch-rate-form .radio {
+        margin: 0;
+        display: inline-block;
+        text-align: center;
+    }
+    #s-lch-rate-form .radio input[type=radio] {
+        position: relative;
+        margin: 0;
+    }
+    .s-lch-rate-emoji {
+        display: block;
+        margin-left: -3px;
+        font-size: 1.5em;
+    }
+    .s-lch-rate-label {
+        display: block;
+    }
+
+    #s-lch-autoload-profile {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        border-bottom: 1px solid #286090;
+        padding-bottom: .5em;
+        margin-bottom: .5em;
+    }
+    #s-lch-autoload-profile .s-lch-profile {
+        -ms-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        color: #286090;
+    }
+    #s-lch-autoload-profile .s-lch-profile-name {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        margin-left: 1em;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #286090;
+    }
+    #s-lch-autoload-head {
+        font-size: 1.1em;
+    }
+    span.s-lch-form-error {
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    #offline .s-lch-btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 5px;
+    }
+
+    #s-lch-dataNotice {
+        padding: 1em;
+        background-color: #f5f5f5;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    /* LibAuth overlay when not authenticated. */
+    .s-lch-auth {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(200, 200, 200, 0.8);
+        margin: -1em;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .s-lch-auth-div {
+        background-color: white;
+        border-color: grey;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+    .s-lch-auth-div .btn-libauth {
+        margin-top: 1rem;
+    }
+</style>
+
+        <!-- Underscore.js template. -->
+<style>
+.s-la-widget h2 { font-size: 18px; margin-top: 0px; }
+.s-la-widget label { font-size: 12px; }
+
+.s-la-widget .tt-dropdown-menu { margin-top: 3px; }
+.s-la-widget .tt-suggestion { font-size: 12px; padding: 3px 8px; }
+.s-la-widget .form-group { margin-bottom: 5px; }
+#login input, #login textarea { font-size: 12px; }
+
+.margin-top { margin-top: 12px !important; }
+.margin-bottom { margin-bottom: 12px !important; }
+
+/*
+	sui.filedrop @todo set it up to include the original css file
+	though this is slightly customized so beware when replacing
+*/
+
+/**
+ * Handle focus visuals on label instead of input
+ */
+.s-ui-filedrop input[type="file"].has-focus + label,
+.s-ui-filedrop input[type="file"]:focus + label,
+.s-ui-filedrop input[type="file"] + label:hover {
+	outline: 2px dotted #212121;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+/**
+ * Drag/drop text hidden if feature unavailable
+ */
+.s-ui-filedrop-dragtext {
+	display: none;
+}
+.s-ui-filedrop.has-advanced-upload .s-ui-filedrop-dragtext {
+  display: inline;
+}
+/**
+ * Clear files button
+ */
+.s-ui-filedrop-clear {
+	display: none;
+}
+.s-ui-filedrop.has-advanced-upload .s-ui-filedrop-clear {
+	display: block;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+/**
+ * Change appearance if feature available
+ */
+.s-ui-filedrop.has-advanced-upload {
+	background-color: #eee;
+	outline: 2px dashed black;
+	outline-offset: -10px;
+	padding: 15px 15px 30px 15px;
+	text-align: center;
+	position: relative;
+}
+.s-ui-filedrop.has-advanced-upload label {
+	border: none;
+	background-color: transparent;
+	color: #111;
+	white-space: normal;
+}
+/**
+ * Styling for drag over event
+ */
+.s-ui-filedrop.is-dragover {
+	background-color: aliceblue;
+}
+/**
+ * Hide error div when its empty
+ */
+.s-ui-filedrop-error:empty {
+	display: none;
+}
+/**
+ * Progress bar background
+ */
+.s-ui-filedrop-progress > div.bar {
+	height: 20px;
+	position: relative;
+	background: #555;
+	-moz-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	border-radius: 25px;
+	padding: 3px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+	margin-bottom: 10px;
+}
+/**
+ * Progress bar part that shows the progress (via width %)
+ */
+.s-ui-filedrop-progress > div.bar > span {
+  display: block;
+  height: 100%;
+  border-radius: 20px;
+  background-color: lightgreen;
+  box-shadow:
+    inset 0 2px 9px  rgba(255,255,255,0.3),
+    inset 0 -2px 6px rgba(0,0,0,0.4);
+  position: relative;
+  overflow: hidden;
+}
+/**
+ * Pseudo-element to add transparent candystriping
+ */
+.s-ui-filedrop-progress > div.bar > span:after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  background-image: linear-gradient(
+    -45deg,
+    rgba(255, 255, 255, .5) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, .5) 50%,
+    rgba(255, 255, 255, .5) 75%,
+    transparent 75%,
+    transparent
+  );
+  z-index: 1;
+  background-size: 50px 50px;
+  animation: move 2s linear infinite;
+  border-radius: 20px;
+  overflow: hidden;
+}
+/**
+ * Animation for the candystriping
+ */
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 50px 50px;
+  }
+}
+
+
+</style>
+
+<!--
+    CSS template
+-->
+<script type="text/template" id="template-css">
+    [tabindex="-1"] {
+        outline: none;
+    }
+    .s-la-widget {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 5px 0px 5px 5px;
+        background-color: {{ color_backg }};
+    }
+    .s-la-widget .container { padding: 0; }
+    .s-la-widget .widget_base {
+        height: 100%;
+        max-width: 50rem;
+    }
+    .s-la-widget .chatpane {
+        height: 100%;
+        padding-right: 5px;
+        overflow-y: auto;
+    }
+    .s-la-widget .color_head {
+        color: {{ color_head }};
+    }
+    .s-la-widget .color_btn {
+        color: {{ color_btn }};
+    }
+    .s-la-widget .btn-chat {
+        color:{{ color_btn }};
+        background-color:{{ color_head }};
+        border-color:{{ color_head }};
+    }
+    .s-la-widget .btn-chat:hover, .s-la-widget .btn-chat:active, .s-la-widget .btn-chat:focus, .s-la-widget .btn-chat[disabled] {
+        color:{{ color_head }};
+        background-color:{{ color_btn }};
+        border-color:{{ color_head }};
+    }
+    .s-la-widget .btn-fullWidth {
+        width: 100%;
+    }
+    .s-lch-pane {
+        height: 100%;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-pack: stretch;
+        -webkit-justify-content: stretch;
+        justify-content: stretch;
+        -ms-flex-align: stretch;
+        -webkit-align-items: stretch;
+        align-items: stretch;
+    }
+    .s-lch-pane header.s-lch-pane-header {
+        padding: 0em 0em .25em 0em;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: end;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        border-bottom: 1px solid {{ color_head }};
+    }
+    .s-lch-pane header h2#s-lch-status {
+        margin-bottom: 0;
+        font-size: 1em;
+        font-weight: normal;
+        line-height: inherit;
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        text-align: left;
+        overflow: hidden;
+    }
+    h2#s-lch-status.disconnected {
+        color: #B00000;
+    }
+    h2#s-lch-status.connected {
+        color: #008000;
+    }
+
+    #s-lch-header-actions {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 1 1 auto;
+        margin-left: 1.5em;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .s-lch-pane header .s-lch-header-end {
+        margin-left: 2em;
+    }
+    #s-lch-header-actions .btn {
+        margin-right: 1em;
+    }
+    #s-lch-header-actions .btn:last-of-type {
+        margin-right: 0;
+    }
+    .s-lch-pane .scroller {
+        -ms-flex: 2 1 auto;
+        -webkit-flex: 2 1 auto;
+        flex: 2 1 auto;
+        overflow-y: scroll;
+    }
+    .s-lch-pane form#s-lch-post-form {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        padding-top: .5em;
+        border-top: 1px solid {{ color_head }};
+    }
+    #s-lch-post-input {
+        height: 4em;
+    	width: 100%;
+    	max-width: 100%;
+    	margin: 0 0 .25em 0;
+    	padding: .5em;
+    	box-sizing: border-box;
+    	font: 12px/1.5em Arial, Helvetica, sans-serif;
+    	border-radius: 2px;
+    	display:block;
+    	border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .s-lch-pane .s-lch-form-actions {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    .s-lch-form-actions button.btn-xs {
+        margin-left: 1em;
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+    }
+    .s-lch-form-actions #istyping {
+        text-align: left;
+        -ms-flex: 2 1 auto;
+        -webkit-flex: 2 1 auto;
+        flex: 2 1 auto;
+        font-size: 12px;
+        font-style: italic;
+        margin: 0px;
+    }
+
+    #s-lch-msg-log {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .s-lch-msg {
+        display: block;
+        margin: .5em;
+        padding: 0;
+    }
+
+    .s-lch-msg-sys .s-lch-msg-txt {
+        font-size: .9em;
+        border-top: 1px dotted {{ color_head }};
+        border-bottom: 1px dotted {{ color_head }};
+        padding: .5em;
+        margin-bottom: 1em;
+    }
+
+    .s-lch-msg-wrap {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -ms-flex-line-pack: start;
+        -webkit-align-content: flex-start;
+        align-content: flex-start;
+    }
+    .s-lch-msg-patron .s-lch-msg-wrap {
+        -ms-flex-pack: end;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+        -ms-flex-line-pack: end;
+        -webkit-align-content: flex-end;
+        align-content: flex-end;
+    }
+    time.s-lch-msg-time {
+        text-align: center;
+        margin: 0 auto .5em auto;
+        display: block;
+        font-size: .8em;
+    }
+    .s-lch-msg-meta {
+        -ms-flex: 0 0 55px;
+        -webkit-flex: 00 55px;
+        flex: 0 0 55px;
+    }
+    .s-lch-msg-patron .s-lch-msg-body {
+        margin-left: 50px;
+        color: {{ color_btn }};
+        background-color: {{ color_head }};
+        padding: .25em .5em;
+        border-radius: 5px;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+    .s-lch-msg-patron time.s-lch-msg-time {
+        text-align: right;
+    }
+    .s-lch-msg-patron .s-lch-msg-txt a {
+        color: {{ color_btn }};
+        text-decoration: underline;
+    }
+    .s-lch-msg-patron .s-lch-msg-txt a:hover, .s-lch-msg-patron .s-lch-msg-txt a:active {
+        color: {{ color_head }};
+        background-color: {{ color_btn }};
+    }
+
+    .s-lch-msg-op .s-lch-msg-body {
+        -ms-flex: 1 1 auto;
+        -webkit-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+    .s-lch-msg-op .s-lch-msg-name {
+        font-size: .9em;
+        font-weight: bold;
+        margin-bottom: .5em;
+    }
+    .s-lch-msg-op time.s-lch-msg-time {
+        text-align: left;
+        display: inline-block;
+        font-weight: normal;
+        margin: 0 0 0 1em;
+        font-size: .9em;
+    }
+    .s-lch-msg-op .s-lch-msg-txt {
+        padding: 0em .5em .25em .5em;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    /* profile image wrap */
+    .s-lch-profile {
+        display: block;
+        color: {{ color_head }};
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        box-sizing: content-box;
+        border: 2px solid currentColor;
+        background-color: currentColor;
+    }
+    .s-lch-profile img {
+        border-radius: 5px;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    #s-lch-rate-form fieldset {
+        margin-bottom: .5em;
+    }
+    #s-lch-rate-form legend {
+        border: 0;
+        margin-bottom: 5px;
+        font-size: inherit;
+    }
+    #s-lch-rate-form .s-lch-rate-opts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    #s-lch-rate-form .radio {
+        margin: 0;
+        display: inline-block;
+        text-align: center;
+    }
+    #s-lch-rate-form .radio input[type=radio] {
+        position: relative;
+        margin: 0;
+    }
+    .s-lch-rate-emoji {
+        display: block;
+        margin-left: -3px;
+        font-size: 1.5em;
+    }
+    .s-lch-rate-label {
+        display: block;
+    }
+
+    #s-lch-autoload-profile {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -ms-flex-pack: start;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        border-bottom: 1px solid {{ color_head }};
+        padding-bottom: .5em;
+        margin-bottom: .5em;
+    }
+    #s-lch-autoload-profile .s-lch-profile {
+        -ms-flex: 0 0 auto;
+        -webkit-flex: 0 0 auto;
+        flex: 0 0 auto;
+        color: {{ color_head }};
+    }
+    #s-lch-autoload-profile .s-lch-profile-name {
+        -ms-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        margin-left: 1em;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: {{ color_head }};
+    }
+    #s-lch-autoload-head {
+        font-size: 1.1em;
+    }
+    span.s-lch-form-error {
+        display: inline-block;
+        margin-right: 1em;
+    }
+
+    #offline .s-lch-btn-close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 5px;
+    }
+
+    #s-lch-dataNotice {
+        padding: 1em;
+        background-color: #f5f5f5;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    }
+
+    /* LibAuth overlay when not authenticated. */
+    .s-lch-auth {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(200, 200, 200, 0.8);
+        margin: -1em;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .s-lch-auth-div {
+        background-color: white;
+        border-color: grey;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+    .s-lch-auth-div .btn-libauth {
+        margin-top: 1rem;
+    }
+</script>
+
+<!--
+ 	widget templates
+ -->
+
+<script type="text/template" id="template-chat-sys-msg">
+    <li id="{{ id }}" class="s-lch-msg s-lch-msg-sys">
+        <time class="s-lch-msg-time {{# if (!show_meta) { }}hidden{{# } }}" aria-hidden="true" pubdate="{{{ ts_html }}}">{{ ts_time }}</time>
+        <div class="s-lch-msg-txt">{{ msg }}</div>
+    </li>
+</script>
+
+<script type="text/template" id="template-chat-patron-msg">
+    <li id="{{ id }}" class="s-lch-msg s-lch-msg-patron">
+        <div class="s-lch-msg-wrap">
+            <div class="s-lch-msg-meta sr-only">
+                <div class="s-lch-msg-name">{{ name }}</div>
+            </div>
+            <div class="s-lch-msg-body">
+                <time class="s-lch-msg-time {{# if (!show_meta) { }}hidden{{# } }}" aria-hidden="true" pubdate="{{{ ts_html }}}">{{ ts_time }}</time>
+                <div class="s-lch-msg-txt">{{ msg }}</div>
+            </div>
+        </div>
+    </li>
+</script>
+
+<script type="text/template" id="template-chat-op-msg">
+    <li id="{{ id }}" class="s-lch-msg s-lch-msg-op s-lch-msg-op-{{ opId }}">
+
+        <div class="s-lch-msg-wrap">
+            <div class="s-lch-msg-meta" aria-hidden="true">
+                {{# if (show_meta) { }}
+                <div class="s-lch-profile" style="color: {{ profile_image.color }};">
+                    <img src="{{{ profile_image.path }}}" alt="{{{ name }}}" />
+                </div>
+                {{# } }}
+            </div>
+            <div class="s-lch-msg-body">
+                {{# if (show_meta) { }}
+                    <div class="s-lch-msg-name">{{ name }} <time class="s-lch-msg-time {{# if (!show_meta) { }}hidden{{# } }}" aria-hidden="true" pubdate="{{{ ts_html }}}">{{ ts_time }}</time></div>
+                {{# } }}
+                <div class="s-lch-msg-txt">{{ msg }}</div>
+            </div>
+        </div>
+    </li>
+</script>
+
+<!-- Contact request template -->
+<script type="text/template" id="template-chat-contact">
+    <li id="s-lch-msg-contact" class="s-lch-msg s-lch-msg-sys">
+        <form class="s-lch-contact-form s-lch-msg-txt" method="post" action="/chat/session/{{ channel }}/contact">
+            <p>{{ contact_request_msg }}</p>
+
+            <div class="form-group">
+                <label for="client_contact">{{ contact_label }}</label>
+                <input type="text" name="client_contact" value="" id="client_contact" class="form-control" />
+            </div>
+
+            {{# if (skip_login && allFields) { }}
+                <div class="login_field form-group">
+            		<label for="client_name" class="control-label">{{ name_label }}{{# if (!enable_anon) { }}*<span class="sr-only">{{ translation.required }}</span>{{# } }}</label>
+            		<input type="text" class="input-sm form-control" {{# if (!enable_anon) { }}required {{# } }} name="client_name" id="client_name" maxlength="100" />
+            	</div>
+
+            	{{# if (user1 !== null && user1.get('show') == 1) {  }}
+            	<div class="form-group">
+            		<label for="s-lch-user1" class="control-label">{{ user1.get('name') }}</label>
+            		{{# if (user1.get('type')=='t') {  }}
+            			<input type="text" class="form-control input-sm s-lch-customfield" name="user1" id="s-lch-user1" />
+            		{{# } else {
+            				print('<select class="form-control input-sm s-lch-customfield" name="user1" id="s-lch-user1"><option value="0"> --- </option>');
+
+            				var items = user1.get('val').split(",");
+            				items.forEach(function (item) {
+            					print("<option value='"+item+"'>"+item+"</option>");
+            				});
+            				print("</select>");
+            		} }}
+            	</div>
+            	{{# } }}
+
+            	{{# if (user2!=null && user2.get('show')==1) {  }}
+            	<div class="form-group">
+            		<label for="s-lch-user2" class="control-label">{{ user2.get('name') }}</label>
+            		{{# if (user2.get('type')=='t') {  }}
+            			<input type="text" class="form-control input-sm s-lch-customfield" name="user2" id="s-lch-user2" />
+            		{{# } else {
+            				print('<select class="form-control input-sm s-lch-customfield" name="user2" id="s-lch-user2"><option value="0"> --- </option>');
+            				var items = user2.get('val').split(",");
+            				items.forEach(function (item) {
+            					print("<option value='"+item+"'>"+item+"</option>");
+            				});
+            				print("</select>");
+            		} }}
+            	</div>
+            	{{# } }}
+
+            	{{# if (user3!=null && user3.get('show')==1) {  }}
+            	<div class="form-group">
+            		<label for="s-lch-user3" class="control-label">{{ user3.get('name') }}</label>
+            		{{# if (user3.get('type')=='t') {  }}
+            			<input type="text" class="form-control input-sm s-lch-customfield" name="user3" id="s-lch-user3" />
+            		{{# } else {
+            				print('<select class="form-control input-sm s-lch-customfield" name="user3" id="s-lch-user3"><option value="0"> --- </option>');
+            				var items = user3.get('val').split(",");
+            				items.forEach(function (item) {
+            					print("<option value='"+item+"'>"+item+"</option>");
+            				});
+            				print("</select>");
+            		} }}
+            	</div>
+            	{{# } }}
+
+
+            {{# } }}
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-default btn-chat btn-xs">{{ submit_button }}</button>
+            </div>
+        </form>
+    </li>
+</script>
+
+<!-- Rate this chat form/msg -->
+<script type="text/template" id="template-chat-rating">
+    <li id="s-lch-msg-rate" class="s-lch-msg s-lch-msg-sys">
+        <div class="s-lch-msg-txt">
+            <form id="s-lch-rate-form" method="POST" action="/chat/session/{{ channel }}/comment">
+                <fieldset>
+    			    <legend>{{ byeMsg }} {{ star_text }}</legend>
+                    <div class="s-lch-rate-opts">
+        				<label class="radio">
+        				    <span class="s-lch-rate-emoji">😀</span>
+        				    <span class="s-lch-rate-label">{{ rate_4 }}</span>
+        				    <input type="radio" value="4" name="chat_rating" />
+        				</label>
+
+        				<label class="radio">
+        				    <span class="s-lch-rate-emoji">🙂</span>
+        				    <span class="s-lch-rate-label">{{ rate_3 }}</span>
+        				    <input type="radio" value="3" name="chat_rating" />
+        				</label>
+
+        				<label class="radio">
+        				    <span class="s-lch-rate-emoji">😐</span>
+        				    <span class="s-lch-rate-label">{{ rate_2 }}</span>
+        		    		<input type="radio" value="2" name="chat_rating" />
+        				</label>
+
+        				<label class="radio">
+        				    <span class="s-lch-rate-emoji">🙁</span>
+        				    <span class="s-lch-rate-label">{{ rate_1 }}</span>
+        				    <input type="radio" value="1" name="chat_rating" />
+        				</label>
+                    </div>
+    			</fieldset>
+    			<div class="form-group">
+				    <label for="client_comment" class="control-label">{{ comments_label }}</label>
+				    <textarea id="client_comment" rows="1" class="form-control input-sm" name="client_comment"></textarea>
+			    </div>
+		        <div class="form-group {{# if (!followup_enabled) { }}hidden{{# } }}">
+			        <label class="check">
+			            <input type="checkbox" name="request_followup" value="1" />
+			            {{ comments_followup }}
+			        </label>
+		        </div>
+		        <div class="form-group">
+			        <label class="check">
+			            <input type="checkbox" name="email_transcript" value="1" />
+			            {{ comments_email }}
+			        </label>
+		        </div>
+		        <div class="form-group hidden">
+			        <label for="rate_client_contact" class="control-label">{{ contact_label }}</label>
+			        <input type="text" name="client_contact" id="rate_client_contact" class="form-control" value="" />
+		        </div>
+                <div class="form-group">
+                   <button type="submit" class="btn btn-default btn-chat btn-xs">{{ comments_button_text }}</button>
+                   <button type="button" class="btn btn-default btn-xs btn-link s-lch-btn-close pull-right">{{ translation.ch_btn_close }}</button>
+                </div>
+            </form>
+        </div>
+    </li>
+</script>
+
+<!-- Chatting pane -->
+<script type="text/template" id="template-chat-panel">
+    <div class="s-lch-pane">
+        <header class="s-lch-pane-header">
+            <h2 id="s-lch-status" class="color_head" aria-live="polite" tabindex="-1">{{ chat_title }}</h2>
+            <div role="toolbar" aria-label="Chat actions" id="s-lch-header-actions">
+                <button type="button" class="btn btn-default btn-xs s-lch-btn-peel hidden" aria-label="{{{ translation.ch_btn_popout }}}"><i class="fa fa-fw fa-external-link"></i></button>
+                {{# if (enable_sound) { }}
+                     <button type="button" class="btn btn-default btn-xs s-lch-btn-sound" aria-label="{{{ translation.ch_sound_on }}}"><i class="fa fa-fw fa-volume-up"></i></button>
+    			{{# } else { }}
+    			     <button type="button" class="btn btn-default btn-xs s-lch-btn-sound" aria-label="{{{ translation.ch_sound_off }}}"><i class="fa fa-fw fa-volume-off"></i></button>
+    			{{# } }}
+    			<button type="button" class="btn btn-default btn-xs s-lch-btn-trans" aria-label="{{{ email_trans }}}"><i class="fa fa-envelope"></i></button>
+                <div class="s-lch-header-end">
+                    <button type="button" class="btn btn-default btn-xs s-lch-btn-close" aria-label="{{{ translation.ch_float_hide }}}" data-tooltip="left"><i class="fa fa-fw fa-window-minimize"></i></button>
+                    <button type="button" class="btn btn-default btn-xs s-lch-btn-end" aria-label="{{{ translation.ch_btn_end }}}" data-tooltip="left"><i class="fa fa-fw fa-times"></i></button>
+                </div>
+            </div>
+            <a href="#s-lch-post-input" class="s-lch-skip-link sr-only">Skip to Chat Message Input</a>
+        </header>
+
+        <ol id="s-lch-msg-log" class="scroller" aria-live="polite" aria-atomic="false" aria-relevant="additions text" aria-label="Chat Log" tabindex="0">
+            {{# if (skip_login) { }}
+                <li id="nologin_message" class="s-lch-msg s-lch-msg-sys">
+                    <div class="s-lch-msg-txt">{{ nologin_message }}</div>
+                </li>
+                {{# if (dataNotice !== '') { }}
+                    <li class="s-lch-msg s-lch-msg-sys">
+                        <div class="s-lch-msg-txt">{{ dataNotice }}</div>
+                    </li>
+                {{# } }}
+			{{# } }}
+        </ol>
+
+        <form id="s-lch-post-form" method="post">
+			<textarea role="textbox" aria-multiline="true" id="s-lch-post-input" placeholder="{{{ translation.ch_message_place }}}" aria-label="{{{ translation.ch_message_label }}}"></textarea>
+			<div class="s-lch-form-actions">
+    			<div id="istyping" aria-hidden="true"></div>
+    			{{#  if (file_uploads) { }}
+				    <button type="button" class="s-lch-btn-file btn btn-default btn-xs hidden" aria-label="{{{ file_title }}}" data-tooltip="left"><i class="fa fa-paperclip"></i></button>
+                {{# } }}
+			    <button id="s-lch-post-submit" class="btn-chat btn btn-xs" type="submit">{{ submit_button }}</button>
+			</div>
+		</form>
+        <a href="#s-lch-header-actions" class="s-lch-skip-link sr-only">Go to chat header actions</a>
+    </div>
+</script>
+
+<!-- Login pane -->
+<script type="text/template" id="template-login-panel">
+	<h2 id="s-lch-welcome" class="color_head margin-bottom" tabindex="-1">{{ chat_title }}</h2>
+	<form id="s-lch-login-form">
+    	<div class="login_field form-group">
+    		<label for="client_name" class="control-label">{{ name_label }}{{# if (!enable_anon) { }}*<span class="sr-only">{{ translation.required }}</span>{{# } }}</label>
+    		<input type="text" class="input-sm form-control" name="client_name" id="client_name" value="{{# if (patron) { }}{{{ patron.name }}}{{# } }}" {{# if (!enable_anon) { }}required{{# } }} maxlength="100" />
+    	</div>
+
+	{{# if (contact_request) { }}
+		<div class="login_field form-group">
+		    <label id="contact_label" for="client_contact" class="control-label">{{ contact_label }}{{# if (contact_required) { }}*<span class="sr-only">{{ translation.required }}</span>{{# } }}</label>
+            <input type="text" class="client_contact input-sm form-control" name="client_contact" id="client_contact" value="{{# if (patron) { }}{{{ patron.client_contact }}}{{# } }}" {{# if (contact_required) { }}required{{# } }} />
+	    </div>
+    {{# } }}
+
+	{{# if (user1 !== null && user1.get('show') == 1) {  }}
+	<div class="form-group">
+		<label for="s-lch-user1" class="control-label">{{ user1.get('name') }}</label>
+		{{# if (user1.get('type')=='t') {  }}
+			<input type="text" class="form-control input-sm s-lch-customfield" name="user1" id="s-lch-user1" />
+		{{# } else {
+				print('<select class="form-control input-sm s-lch-customfield" name="user1" id="s-lch-user1"><option value="0"> --- </option>');
+
+				var items = user1.get('val').split(",");
+				items.forEach(function (item) {
+					print("<option value='"+item+"'>"+item+"</option>");
+				});
+				print("</select>");
+		} }}
+	</div>
+	{{# } }}
+
+	{{# if (user2!=null && user2.get('show')==1) {  }}
+	<div class="form-group">
+		<label for="s-lch-user2" class="control-label">{{ user2.get('name') }}</label>
+		{{# if (user2.get('type')=='t') {  }}
+			<input type="text" class="form-control input-sm s-lch-customfield" name="user2" id="s-lch-user2" />
+		{{# } else {
+				print('<select class="form-control input-sm s-lch-customfield" name="user2" id="s-lch-user2"><option value="0"> --- </option>');
+				var items = user2.get('val').split(",");
+				items.forEach(function (item) {
+					print("<option value='"+item+"'>"+item+"</option>");
+				});
+				print("</select>");
+		} }}
+	</div>
+	{{# } }}
+
+	{{# if (user3!=null && user3.get('show')==1) {  }}
+	<div class="form-group">
+		<label for="s-lch-user3" class="control-label">{{ user3.get('name') }}</label>
+		{{# if (user3.get('type')=='t') {  }}
+			<input type="text" class="form-control input-sm s-lch-customfield" name="user3" id="s-lch-user3" />
+		{{# } else {
+				print('<select class="form-control input-sm s-lch-customfield" name="user3" id="s-lch-user3"><option value="0"> --- </option>');
+				var items = user3.get('val').split(",");
+				items.forEach(function (item) {
+					print("<option value='"+item+"'>"+item+"</option>");
+				});
+				print("</select>");
+		} }}
+	</div>
+	{{# } }}
+
+	{{# if (online_rule.u > 0) { }}
+		<input type="hidden" name="opId" value="{{ online_rule.u }}" />
+	{{# } else if (online_rule.c && online_rule.c !== '') { }}
+		<input type="hidden" name="coopId" value="{{ online_rule.c }}" />
+	{{# } else { }}
+		{{# if (online_rule.d.length > 1) { }}
+		<div class="form-group">
+			<label for="dept_sel">{{ dept_label }}</label>
+			<select class="form-control input-sm" name="dept" id="dept_sel">
+			{{# online_rule.d.forEach(function (dept) {
+				print('<option value="'+dept.id+'">'+dept.name+'</option>');
+			}); }}
+			</select>
+		</div>
+		{{# } else if (online_rule.d.length === 1) { }}
+			<input type="hidden" name="dept" value="{{ online_rule.d[0].id }}" />
+		{{# } }}
+	{{# } }}
+
+	{{# if (initial_question) {  }}
+	<div class="form-group">
+		<label class="control-label" for="client_question">{{ initial_question_label }}*<span class="sr-only">{{ translation.required }}</span></label>
+		<textarea id="client_question" class="form-control input-sm" name="client_question" id="client_question" required>{{{ question_text }}}</textarea>
+	</div>
+	{{# } }}
+	<div class="form-group">
+		<button type="submit" class="btn-chat btn btn-xs btn-fullWidth">{{ chat_button }}</button>
+		{{# if (fbwidget) {  }}
+		    <button type="button" class="btn-chat btn btn-sm s-lch-btn-close btn-fullWidth margin-top">{{ translation.ch_btn_close }}</button>
+        {{# } else if (widget_type == 6) { }}
+		    <button type="button" class="btn-chat btn btn-sm s-lch-btn-close btn-fullWidth margin-top">{{ translation.ch_float_hide }}</button>
+        {{# } else if (widget_type == 3) { }}
+            <button type="button" class="btn-chat btn btn-xs s-lch-btn-close btn-fullWidth margin-top">{{ translation.ch_btn_close }}</button>
+        {{# } }}
+    </div>
+    {{# if (dataNotice !== '') { }}
+        <div id="s-lch-dataNotice">
+            {{ dataNotice }}
+        </div>
+    {{# } }}
+	</form>
+</script>
+
+<!-- File upload widget display -->
+<script type="text/template" id="template-file-upload-panel">
+	<h2 class="color_head" tabindex="-1">{{ file_title }}</h2>
+	<form id="s-lch-file-form" name="s-lch-file-form" method="POST" enctype="multipart/form-data" action="/chat/session/{{ channel }}/file">
+		<input type="hidden" name="iid" value="{{ iid }}" />
+		<div id="s-lch-file-intro" class="margin-bottom">{{ file_intro }}</div>
+		<div class="form-group s-ui-filedrop">
+			<input type="file" name="ufile" id="ufile" value="" class="sr-only" />
+			<label for="ufile" class="btn btn-default"><div><i class="fa fa-upload fa-lg"></i></div>
+			<div class="s-ui-filedrop-filenames hidden"><strong>Selected Files:</strong><ul></ul></div>
+			<span class="filetext">{{ file_label }}</span></label>
+			<button type="button" class="btn btn-default btn-xs s-ui-filedrop-clear">Clear File</button>
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn-chat btn btn-sm">{{ file_action }}</button> <button type="button" class="btn-chat btn btn-sm btn-file-cancel">{{ cancel_button }}</button>
+		<div class="alert alert-danger s-ui-filedrop-error" role="alert"></div>
+	</form>
+</script>
+
+<!-- Offline widget display -->
+<script type="text/template" id="template-chat-offline">
+	<h2 class="color_head" tabindex="-1">{{ offline_text }}</h2>
+    {{# if (widget_type == 6) { }}
+        <button type="button" class="btn btn-default btn-xs s-lch-btn-close hidden" aria-label="{{{ translation.ch_float_hide }}}"><i class="fa fa-fw fa-window-minimize"></i></button>
+    {{# } else { }}
+        <button type="button" class="btn btn-default btn-xs s-lch-btn-close hidden" aria-label="{{{ translation.ch_btn_close }}}"><i class="fa fa-fw fa-close"></i></button>
+    {{# } }}
+	<div id="s-lch-search-box" class="margin-bottom">{{ la_search_box }}</div>
+	<div class="s-lch-offline-msg margin-bottom">{{ la_hide_msg }}</div>
+	<div class="s-lch-offline-msg margin-bottom">{{ la_hide_msg2 }}</div>
+	{{# if (cal_offline) { }}
+	<div class="s-lch-cal-link">
+        <a href="{{{ cal_url }}}" class="btn btn-sm btn-chat" target="_blank">{{ cal_text }}</a>
+	</div>
+	{{# } }}
+</script>
+
+<!-- Auto-popup widget intro -->
+<script type="text/template" id="template-chat-autoload">
+    {{# if (profile.name !== '') { }}
+    <div id="s-lch-autoload-profile">
+        <div class="s-lch-profile" style="color: {{ profile.color }};">
+            <img src="{{{ profile.image }}}" alt="" />
+        </div>
+        <div class="s-lch-profile-name">{{ profile.name }}</div>
+    </div>
+    {{# } }}
+    <h2 id="s-lch-autoload-head" class="color_head" tabindex="-1">{{ autoload_head }}</h2>
+	<div id="s-lch-autoload-text">{{ autoload_text }}</div>
+	<div id="s-lch-autoload-actions" class="margin-top">
+		<button id="s-lch-autoload-yes" type="button" class="btn-chat btn btn-sm margin-bottom">{{ autoload_yes }}</button>
+		{{# if (cal_autoload) { }}
+            <a href="{{{ cal_url }}}" class="btn btn-sm btn-chat margin-bottom" target="_blank">{{ cal_text }}</a>
+        {{# } }}
+		<button id="s-lch-autoload-no" type="button" class="btn-chat btn btn-sm margin-bottom">{{ autoload_no }}</button>
+	</div>
+</script>
+
+<!-- LibAuth Login Overlay -->
+<script type="text/template" id="template-chat-libauth">
+    {{# if (auth_id > 0 && !isAuthValidated) { }}
+        <div class="s-lch-auth">
+            <div class="s-lch-auth-div">
+                <div>
+                    {{ authText }}
+                </div>
+                <a href="{{ authUrl }}" class="btn btn-primary btn-libauth">{{ authButton }}</a>
+            </div>
+        </div>
+    {{# } }}
+</script>
+
+    </head>
+
+    <body class="s-la-widget" data-widget-id="13987" data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="">
+        <div class="widget_base container">
+            <div id="libauth"></div>
+            <div id="autoload" class="chatpane">
+    
+    <div id="s-lch-autoload-profile">
+        <div class="s-lch-profile" style="color: ;">
+            <img src="./profile_default.svg" alt="">
+        </div>
+        <div class="s-lch-profile-name">User Services</div>
+    </div>
+    
+    <h2 id="s-lch-autoload-head" class="color_head" tabindex="-1">Do you need help?</h2>
+	<div id="s-lch-autoload-text">We're online and ready to help.</div>
+	<div id="s-lch-autoload-actions" class="margin-top">
+		<button id="s-lch-autoload-yes" type="button" class="btn-chat btn btn-sm margin-bottom">Chat Now</button>
+		
+		<button id="s-lch-autoload-no" type="button" class="btn-chat btn btn-sm margin-bottom">No Thanks</button>
+	</div>
+</div>
+            <div id="login" class="chatpane hidden"></div>
+            <div id="away" class="chatpane hidden"></div>
+            <div id="chat" class="chatpane hidden"></div>
+            <div id="file" class="chatpane hidden"></div>
+            <div id="offline" class="chatpane hidden"></div>
+            <audio id="sound" src="https://laimages.s3.amazonaws.com/data/libchat/chat_msg.mp3"></audio>
+        </div>
+
+        <script type="text/javascript" src="./jquery.min.js"></script>
+        <script type="text/javascript" src="./libchatwidget.min.js"></script>
+
+        <script>
+            var cascadeServer = 'https\u003A\/\/chat\u002Dus.libanswers.com';
+            var altCascadeServer = 'https\u003A\/\/claremont.libanswers.com';
+            var socketIoUrl = "https\u003A\/\/chat\u002Dus.libanswers.com\/js2.48.6\/socket.io\/socket.io.js";
+            /**
+             * Model for the patron.
+             */
+            var patronSession = Object.create(springSpace.chat.patronSession);
+            patronSession.init({"iid":1587,"referer":"https:\/\/libguides.libraries.claremont.edu\/az.php","widget":"LibChat proactive widget","consortium":[],"isPeel":false,"region":"prod_us","fallbacks":[{"u":0,"d":[4905],"c":""},{"u":0,"d":[2560],"c":""}],"name":"","client_contact":""});
+
+            /**
+             * Array of ops involved in the chat.
+             */
+            var operatorsList = [];
+
+            /**
+             *  Model for the widget and its settings.
+             */
+            var chatWidget = Object.create(springSpace.chat.chatWidget);
+            chatWidget.initialize({"id":13987,"iid":1587,"hash":"0d6bf8436d5341bd2a72d509b48d02f1","name":"LibChat proactive widget","key":"874689df5bb17ae","queue_id":"2073","chat_title":"Chat With Us!","byeMsg":"Thanks for chatting!","dept_label":"Select Department:","name_label":"Your Name","name_default":"","guest_label":"Guest","contact_label":"Your Email","width":"100%","height":340,"chat_button":"Start Chat","press_enter":"Press ENTER to send","submit_button":"Submit","email_trans":"View\/Email Transcript","offline_text":"Ask Us","offline_url":"","slidebutton_url":"","slidebutton_url_off":"","slidebutton_text":"Chat With Us","slidebutton_text_off":"Offline","slidebutton_position":"b","slidebutton_bcolor":"#332A7E","slidebutton_color":"#FFFFFF","slidebutton_bcolor_off":"#286090","slidebutton_color_off":"#ffffff","slidebutton_width":"","slidebutton_height":"","la_hide":false,"la_hide_msg":"Sorry, chat is offline but you can still get help.","la_hide_msg2":"<a href=\"{{ domain }}\" target=\"_parent\">Search our Knowledgebase and\/or submit your question<\/a>","la_search_opt":{"group_id":"0","label":"","button":"Search","placeholder":""},"la_search_box":"<div id=\"s-la-content-search-13987\" class=\"s-la-content-search s-la-content\">\n    <form method=\"get\" name=\"s-la-searchform\" id=\"s-la-searchform-13987\" action=\"\/1.0\/search\/\" target=\"_parent\" role=\"search\" aria-labelledby=\"s-la-content-search-query-13987\">\n        <input type=\"hidden\" name=\"t\" value=0 \/>\n        <input type=\"hidden\" name=\"iid\" value=\"1587\" \/>\n        <input type=\"hidden\" name=\"group_id\" value=\"0\" \/>\n        <input type=\"hidden\" name=\"output\" value=\"redirect\" \/>\n        <input type=\"hidden\" name=\"src\" value=\"4\" \/>\n\n        <div class=\"form-group\">\n            <label for=\"s-la-content-search-query-13987\" class=\"s-la-searchform-label control-label\"><\/label>\n            <input type=\"text\" id=\"s-la-content-search-query-13987\" class=\"s-la-content-search-query form-control\" name=\"q\" placeholder=\"\" value=\"\" autocomplete=\"off\"\/>\n        <\/div>\n        <div class=\"form-group\">\n            <button class=\"btn btn-sm btn-default s-la-searchform-button\" type=\"submit\" style=\"background-color: #286090; border-color: #286090; color: #FFFFFF;\">Search<\/button>\n        <\/div>\n    <\/form>\n    <script>jQuery(document).ready(function() { searchform_13987 = springSpace.la.initFaqSearchForm({ contentId: 13987, iid: 1587, apiDomain: 'claremont.libanswers.com', groupId: [0], limit: 5 }); });<\/script>\n<\/div>\n","star_text":"How did we do?","rate_1":"Not Good","rate_2":"So-so","rate_3":"Good","rate_4":"Great","trans":"Enter an email address to send this chat transcript to:","error_sess":"Error starting session.","error_send":"Error sending this message.","initial_question":true,"initial_question_label":"Your Question","comments_label":"Any comments?","comments_button_text":"Submit Feedback","comments_followup":"I would like to be contacted for a follow-up.","comments_email":"Email yourself a transcript of this chat","enable_anon":false,"enable_sound":false,"star_ratings":true,"file_uploads":true,"file_title":"Upload File","file_intro":"Note: Maximum file size is 5MB. File is removed after one month, it is not kept permanently.","file_label":"Attach a file","file_action":"Upload","cancel_button":"Cancel","custom_css":"","color_backg":"#f9f9f9","color_head":"#286090","color_btn":"#FFFFFF","color_border":"","user1":{"name":"","id":0,"show":0,"required":0,"type":"t","val":""},"user2":{"name":"","id":0,"show":0,"required":0,"type":"t","val":""},"user3":{"name":"","id":0,"show":0,"required":0,"type":"t","val":""},"error_off":"Sorry it doesn't appear any librarians are online... Please try again later.","wait":"Please wait... We will connect shortly!","widget_type":6,"skip_login":false,"nologin_message":"Type your question in the box below and press Enter to start chatting.","autoload_time":45,"autoload_head":"Do you need help?","autoload_text":"We're online and ready to help.","autoload_yes":"Chat Now","autoload_no":"No Thanks","missedchat_time":30,"missedchat_message":"We apologize for the delay. Don't want to wait?","missedchat_link":"Submit your question.","error_message":"Sorry, it looks like you're having a connection issue. Would you like to submit your question for email follow-up?","error_link":"Submit your question.","away_message":"Chat is online but the operator is temporarily away. If you don't want to wait, you can submit your question for email follow-up.","away_link":"Submit your question.","reload_button":"Recheck Status","valid_form_q":"Please enter your question.","valid_form_n":"Please enter your name.","valid_form_c":"Please enter valid contact information.","fbwidget":false,"autopop":true,"contact_request":true,"contact_required":true,"contact_request_msg":"Please enter your email address so we can follow up with you if needed. ","followup_enabled":true,"followup_msg":"If you would like someone to follow up with you via email or phone, submit a message below to create a new support ticket.","cal_offline":true,"cal_autoload":false,"cal_text":"Schedule a Research Appointment","cal_url":"https:\/\/claremont.libcal.com\/appointments\/?g=1372","defaultProfile":"https:\/\/laimages.s3.amazonaws.com\/data\/libchat\/profile_default.svg","dataNotice":"","greetingLocal":"","greetingCoop":"","timedFallback":"0","authUrl":"","authText":"","authButton":"","isAuthValidated":true,"uid":33414,"translation":{"ch_banned_msg":"Sorry, your IP has been blocked.","ch_comment_success":"Thanks for commenting!","ch_comment_error":"Sorry, it failed to submit.","ch_file_error":"Upload failed. Please try again.","ch_user_pronoun":"You","ch_connect_lost":"Connection lost: reconnecting...","ch_connect_regained":"Connection re-established.","ch_status_connecting":"Connecting...","ch_status_connected":"Connected","ch_status_disconnected":"Disconnected","ch_reconnect_chat":"Reconnected to existing conversation.","ch_status_label":"Online status","ch_btn_popout":"Pop out chat box","ch_btn_end":"End Chat","ch_message_label":"Your message","ch_message_place":"Type your message here...","ch_float_show":"Open chat","ch_float_hide":"Minimize chat","ch_float_start":"Start chat","ch_btn_close":"Close Chat","ch_action_newchat":"Start a new Chat","ch_op_left":" has left the chat","ch_op_typing":" is typing...","ch_op_join":" has joined the chat","ch_op_away":" has temporarily disconnected","ch_op_back":" has reconnected","ch_sound_on":"Sound is On (click to toggle)","ch_sound_off":"Sound is Off (click to toggle)","ch_contact_info_saved":"Contact information saved.","ch_include_comment":"Please include comment text.","ch_dept_greeting":"You are now chatting with %deptName% Department.","required":"Required","ch_message_unsendable":"Sorry, you've been temporarily disconnected. Please wait and try again.","ch_connect_error":"Sorry, it looks like you're having a connection issue."},"domain":"https:\/\/claremont.libanswers.com","onlineRules":[{"u":0,"d":[4905],"c":""},{"u":0,"d":[2560],"c":""}],"unit_id":0,"auth_id":0,"onlinerules":[{"u":0,"d":[4905],"c":""},{"u":0,"d":[2560],"c":""}],"referer":"https:\/\/libguides.libraries.claremont.edu\/az.php","referer_title":"Library Databases, A-Z","loadedQueryString":"referer=https%3A%2F%2Flibguides.libraries.claremont.edu%2Faz.php&referer_title=Library%20Databases%2C%20A-Z&auth_id=0&auto=true","question_text":"","autologin":false});
+
+            /**
+             * Department info so we can match IDs to department data.
+             */
+            var departments = {"2560":{"id":2560,"name":"Ask a Librarian","image":"https:\/\/laimages.s3.amazonaws.com\/data\/libchat\/profile_default.svg","color":"#333333"},"4580":{"id":4580,"name":"Digital Scholarship","image":"https:\/\/laimages.s3.amazonaws.com\/data\/libchat\/profile_default.svg","color":""},"4456":{"id":4456,"name":"Special Collections","image":"https:\/\/laimages.s3.amazonaws.com\/data\/libchat\/profile_default.svg","color":""},"4905":{"id":4905,"name":"User Services","image":"https:\/\/laimages.s3.amazonaws.com\/data\/libchat\/profile_default.svg","color":""}};
+
+            try {
+                var controller = Object.create(springSpace.chat.chatWidgetControl);
+                controller.init(chatWidget, patronSession, cascadeServer, socketIoUrl, departments, altCascadeServer);
+            } catch (e) {
+                console.log('Fatal error in init:' + e.message);
+            }
+        </script>
+    
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

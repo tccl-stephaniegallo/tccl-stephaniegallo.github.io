@@ -1,0 +1,24 @@
+/*
+ sui.helptip
+*/
+
+.s-ui-helptip {
+	display: inline-block;
+}
+.s-ui-helptip .btn-link {
+	padding: 6px;
+}
+.s-ui-helptip .popover {
+	max-width: 500px;
+	min-width: 200px;
+}
+.s-ui-helptip .popover-title {
+	padding: 8px;
+}
+.s-ui-helptip .popover-title .btn-close {
+	margin-top: -6px;
+}
+/* avoid large bottom space in popovers */
+.s-ui-helptip .popover-content p:last-of-type {
+    margin-bottom: 0;
+}
