@@ -756,7 +756,7 @@ springStats.saConfig = springStats.saConfig || {
 <!-- BEGIN: content -->
 <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
     <section>
-        <div id="s-lg-az-search-bar" class="row" style="z-index: 999 !important;">
+        <div id="s-lg-az-search-bar" class="row" style="z-index: 9999 !important">
             <div id="az-search-col-1" class="col-md-12 center">
                 <!-- az_navbar_wide.twig -->
 <nav class="navbar navbar-default" aria-label="Search filters">
@@ -11103,21 +11103,29 @@ Funded by the Keck Graduate Institute, School of Pharmacy.</div>
 
 </body>
 
-<style class="amino amino-local">
+<style>
    #az-search-col-1 {
-     background-color: #fff;
-     padding-top: 16px;
-     border: 1px solid #eee;
-     /*position: fixed;
-     top: 10;
-     right: 50;*/
-     z-index: 999;
+      background-color: #fff;
+      padding-top: 16px;
+      /*border: 1px solid #eee;*/
+      /*position: fixed;
+      top: 10;
+      right: 50;*/
+      z-index: 9999 !important;
    }
+   #s-lg-az-index {
+      background-color: #fff;
+      z-index: 9999 !important;
+   }
+
 </style>
 <script>
    var element = $('#az-search-col-1');
+   var element2 = $('#s-lg-az-index');
    var element_position = $('#az-search-col-1').offset().top;
+   var element2_position = $('#s-lg-az-index').offset().top;
    var offset = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height();
+   var offset2 = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height() + element.height();
 
    $(window).on('scroll', function() {
       var y_scroll_position = window.pageYOffset;
@@ -11129,10 +11137,17 @@ Funded by the Keck Graduate Institute, School of Pharmacy.</div>
          console.log("make the thing move");
          element.css('position', 'fixed');
          element.css('top', offset);
+
+         element2.css('position', 'fixed');
+         element2.css('top', offset2);
       } else if(y_scroll_position <= scroll_position) {
          element.css('position', 'relative');
          element.css('width', $('#s-lg-az-cols').width());
          element.css('top', 'unset');
+
+         element2.css('position', 'relative');
+         element2.css('width', $('#s-lg-az-cols').width());
+         element2.css('top', 'unset');
       }
    });
    window.addEventListener('resize', function(event) {
