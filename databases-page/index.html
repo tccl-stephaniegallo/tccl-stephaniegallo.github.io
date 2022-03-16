@@ -11111,13 +11111,19 @@ Funded by the Keck Graduate Institute, School of Pharmacy.</div>
       /*position: fixed;
       top: 10;
       right: 50;*/
+      width: auto;
       z-index: 99 !important;
    }
    #s-lg-az-index {
       background-color: #fff;
+      border-bottom: 1px solid #eee;
+      padding: 0;
+      width: auto;
       z-index: 99 !important;
    }
-
+   #s-lg-az-index {
+      /*border: 1px solid red !important;*/
+   }
 </style>
 <script>
    var element = $('#az-search-col-1');
@@ -11125,22 +11131,53 @@ Funded by the Keck Graduate Institute, School of Pharmacy.</div>
    var element_position = $('#az-search-col-1').offset().top;
    var element2_position = $('#s-lg-az-index').offset().top;
    var offset = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height();
-   var offset2 = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height() + element.height();
+   var offset2 = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height() + element.height() - 3;
 
+   window.addEventListener('resize', function(event) {
+      var windowSize = window.innerWidth;
+      var currentY = element_position - offset;
+
+      console.log("window size = " + windowSize);
+
+
+      //need to recaulate offset/height if the window is smaller than tablet/mobile
+      console.log("$('#s-lg-az-cols').width() = " + $('#s-lg-az-cols').width());
+      console.log("windowSize = " + windowSize);
+
+      if(($('#s-lg-az-cols').width() <= windowSize) && !(window.pageYOffset <= currentY)) {
+         console.log("window resize");
+         var bodyWidth = $('#s-lg-az-cols').width() - 25;
+
+         element.css('width', bodyWidth);
+         element2.css('width',  bodyWidth);
+         offset2 = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height() + element.height();
+         element2.css('top', offset2);
+      } else {
+         console.log("auto width for elements");
+         element.css('width', '100%');
+         element2.css('width',  '100%');
+      }
+
+   }, true);
    $(window).on('scroll', function() {
       var y_scroll_position = window.pageYOffset;
       var scroll_position = element_position - offset;
 
-      //console.log(element_position);
-      //console.log(y_scroll_position);
+
+
       if(y_scroll_position >= scroll_position) {
-         console.log("make the thing move");
+         //if scrollbar position is at the element position, then make the element move
+
          element.css('position', 'fixed');
          element.css('top', offset);
 
          element2.css('position', 'fixed');
          element2.css('top', offset2);
+         //element2.css('padding-top', '10px');
+
       } else if(y_scroll_position <= scroll_position) {
+         //if scroll bar position is less than the element position, then don't move the element
+
          element.css('position', 'relative');
          element.css('width', $('#s-lg-az-cols').width());
          element.css('top', 'unset');
@@ -11148,14 +11185,8 @@ Funded by the Keck Graduate Institute, School of Pharmacy.</div>
          element2.css('position', 'relative');
          element2.css('width', $('#s-lg-az-cols').width());
          element2.css('top', 'unset');
+
       }
    });
-   window.addEventListener('resize', function(event) {
-      console.log("window resize");
-
-      if($('#s-lg-az-cols').width() <= $(window).width()) {
-         element.css('width', $('#s-lg-az-cols').width());
-      }
-   }, true);
 </script>
 </html>
