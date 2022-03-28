@@ -11144,6 +11144,12 @@ Funded by the Keck Graduate Institute, School of Pharmacy.</div>
       console.log("$('#s-lg-az-cols').width() = " + $('#s-lg-az-cols').width());
       console.log("windowSize = " + windowSize);
 
+      if($('#s-lg-az-cols').height() != element) {
+         console.log("$(#s-lg-az-cols).height() != element");
+         element = $('#s-lg-az-cols');
+         offset2 = $('.ccl-c-user-nav').height() + $('.ccl-c-quick-nav').height() + element.height();
+      }
+
       if(($('#s-lg-az-cols').width() <= windowSize) && !(window.pageYOffset <= currentY)) {
          console.log("window resize");
          var bodyWidth = $('#s-lg-az-cols').width() - 25;
